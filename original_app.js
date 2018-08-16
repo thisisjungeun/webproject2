@@ -123,8 +123,8 @@ passport.deserializeUser(function(id, done) {
 });
 
 passport.use(new FacebookStrategy({
-    clientID: '1935200200110824',
-    clientSecret: '9cb0126b77adcb6a26dcc1954abf96cc',
+    clientID: 'bigSecret',
+    clientSecret: 'bigSecret',
     callbackURL: "/auth/facebook/callback",
     profileFields: ['id', 'displayName', 'email']
   },
