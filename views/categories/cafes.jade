@@ -1,0 +1,11 @@
+extends ./category_layout.jade
+
+block title
+  title Cafes & Restaurants
+
+block content
+  h1 CAFES & RESTAURANTS
+  ul#list
+    each result in results
+      li
+        a(href='/home/'+result.category+'/'+result.id)= result.title

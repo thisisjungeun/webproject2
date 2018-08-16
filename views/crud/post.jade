@@ -1,0 +1,75 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    style.
+      html {
+      min-height: 100%;
+      }
+      body {
+      background: linear-gradient(to top, #faaca8, #ddd6f3);
+      font-family: Arial;
+      }
+      #menubar {
+      margin: 40px;
+      padding: 0px;
+      list-style: none;
+      }
+      #menubar li {
+      float: left;
+      width: 250px;
+      height: 40px;
+      background: #ff80bf;
+      color: #ffffff;
+      opacity: .8;
+      text-align: center;
+      line-height: 40px;
+      font-weight: 900;
+      }
+      #menubar li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 900;
+      }
+      img {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      }
+      section {
+      margin: auto;
+      width: 50%;
+      padding: 5px;
+      text-align: center;
+      }
+      article {
+      text-align: center;
+      }
+      div {
+      background: #d0d0ff;
+      text-align: center;
+      display: inline-block;
+      margin: 5px;
+      padding: 1.5px;
+      }
+      div a {
+      text-decoration: none;
+      color: #000000;
+      }
+    block title
+      title= title
+  body
+    include ../includes/hyperlinks.jade
+    img(src=userfile)
+    section
+      h2= title
+      small= author
+      br
+      small= createdDate
+      br
+    article= text
+    div
+      a(href='/home/'+category+'/'+id+'/edit') Edit
+    div
+      a(href='/home/'+category+'/'+id+'/delete') Delete
